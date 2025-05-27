@@ -36,3 +36,17 @@ dict
 # Specialized Data Types
 
 None
+
+
+# operator precedence
+
+print(2 + 3 * 4) # 14
+print((2 + 3) + 4 ** 4) # 81
+
+# ()
+# **
+
+# operational bin() and complex
+
+print(bin(10)) # 0b1010
+print(int('0b1010', 2)) # 10
