@@ -110,3 +110,36 @@ print(c)  # <class 'int'>
 
 # print(type(str(123)))  # '123'
 # print(type(int(str(123))))  # '123'
+
+# Escape Sequences
+
+# \n, \t, \\, \', \"
+
+weather = "It\'s a nice day \nwith a lot of sunshine"
+print(weather)  # It's a nice day
+
+
+# Formatted Strings
+
+name = "Nizar"
+age = 24
+print(f"Hello, my name is {name} and I'm {age} years old.")
+print('Hi '+ name + '. You are ' + str(age) + ' years old.')
+print('Hi {}. You are {} years old.'.format(name, age))
+
+# String index
+
+selfish = 'me me me'
+        #  01234567
+
+print(selfish[0]) # m
+# [start:stop]
+print(selfish[0:2]) # me
+# [start:stop:stepover]
+print(selfish[0:2:5]) # m
+print(selfish[-1]) # e start from the end
+
+# Immutability
+
+selfish = 100
+print(selfish)  # 100
