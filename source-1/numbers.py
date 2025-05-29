@@ -143,3 +143,22 @@ print(selfish[-1]) # e start from the end
 
 selfish = 100
 print(selfish)  # 100
+
+# Built in Functions -  Python string methods
+
+greet = 'Hello'
+print(len(greet))  # 5
+print(greet[0:len(greet)])  # Hello
+print(greet[0:len(greet):2])  # Hlo
+print(greet[::-1])  # olleH
+
+
+quote = 'to be or not to be'
+
+print(quote.upper())  # TO BE OR NOT TO BE
+print(quote.lower())  # to be or not to be
+print(quote.title())  # To Be Or Not To Be
+print(quote.capitalize())  # To be or not to be
+print(quote.replace('be', 'me'))  # to me or not to me
+print(quote.find('be'))  # 3
+print(quote.count('be'))  # 2
