@@ -162,3 +162,38 @@ print(quote.capitalize())  # To be or not to be
 print(quote.replace('be', 'me'))  # to me or not to me
 print(quote.find('be'))  # 3
 print(quote.count('be'))  # 2
+
+# booleans
+
+name = 'Nizar'
+is_cool = True
+print(f"Hi, my name is {name}. Am I cool? {is_cool}")
+print(bool(0))  # False
+print(bool(1))  # True
+
+# Exercise Type Conversion
+
+# name = 'Nizar'
+# age = 24
+# relationship_status = 'Single'
+
+# relationship_status = 'In a relationship'
+
+# print(relationship_status)
+
+birth_year = input('What year were you born? ')
+# print(type(birth_year))  # <class 'str'>
+# Convert the input to an integer
+age = 2025 - int(birth_year)
+print(f"You age is: {age}")
+
+
+# Exercise password checker
+
+username = input('Enter your username? ')
+password = input('Enter your password? ')
+
+password_length = len(password)
+hidden_password = '*' * password_length  # Mask the password with asterisks
+
+print(f"Hello {username}, your password is {hidden_password} and it is {password_length} characters long.")
