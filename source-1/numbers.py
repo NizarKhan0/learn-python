@@ -181,19 +181,99 @@ print(bool(1))  # True
 
 # print(relationship_status)
 
-birth_year = input('What year were you born? ')
-# print(type(birth_year))  # <class 'str'>
-# Convert the input to an integer
-age = 2025 - int(birth_year)
-print(f"You age is: {age}")
+# birth_year = input('What year were you born? ')
+# # print(type(birth_year))  # <class 'str'>
+# # Convert the input to an integer
+# age = 2025 - int(birth_year)
+# print(f"You age is: {age}")
 
 
 # Exercise password checker
 
-username = input('Enter your username? ')
-password = input('Enter your password? ')
+# username = input('Enter your username? ')
+# password = input('Enter your password? ')
 
-password_length = len(password)
-hidden_password = '*' * password_length  # Mask the password with asterisks
+# password_length = len(password)
+# hidden_password = '*' * password_length  # Mask the password with asterisks
 
-print(f"Hello {username}, your password is {hidden_password} and it is {password_length} characters long.")
+# print(f"Hello {username}, your password is {hidden_password} and it is {password_length} characters long.")
+
+
+# List
+
+li = [1, 2, 3, 4, 5]
+li2 = ['a', 'b', 'c', 'd', 'e']
+li3 = [1, 2, 3, 'a', 'b', 'c', True]
+
+print(li)
+
+# list slicing
+shopping_list = ['milk', 'bread', 'eggs', 'butter']
+# print(shopping_list[0])  # milk
+# print(shopping_list[1:3])  # ['bread', 'eggs']
+
+shopping_list[0] = 'milk'
+new_list = shopping_list[:]  # copy the entire list
+# new_list = shopping_list[0:3]  # ['bread', 'eggs', 'butter']
+shopping_list[0] = 'cheese'  # Change the first item to 'cheese'
+print(shopping_list)  # ['cheese', 'bread', 'eggs', 'butter']
+print(new_list)  # ['milk', 'bread', 'eggs']
+
+# Matrix
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[0][1])  # 2
+
+# list method 1
+
+basket = [1, 2, 3, 4, 5]
+
+# adding items
+basket.append(6)  # Add 6 to the end of the list
+print(basket)  # [1, 2, 3, 4, 5, 6]
+
+basket.insert(0, 0)  # Insert 0 at the beginning of the list
+print(basket)  # [0, 1, 2, 3, 4, 5, 6]
+
+basket.extend([7, 8, 9])  # Add multiple items to the end of the list
+print(basket)  # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# removing items
+basket.pop()  # Remove the last item from the list
+print(basket)  # [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+basket.remove(2)  # Remove the first occurrence of 2 from the list
+print(basket)  # [0, 1, 3, 4, 5, 6, 7, 8]
+
+basket.clear()  # Remove all items from the list
+print(basket)  # []
+
+
+# list method 2
+
+basket = ['a', 'b', 'c', 'd', 'e', 'a']
+
+print(basket.index('b'))
+print('a' in basket)  # True
+print('f' in basket)  # False
+
+print(basket.count('a'))  # 2
+
+# list method 3
+
+basket = ['a', 'x', 'b', 'c', 'd', 'e']
+
+basket.sort()  # Sort the list in ascending order
+print(basket)  # ['a', 'b', 'c', 'd', 'e']
+
+print(sorted(basket))  # ['a', 'b', 'c', 'd', 'e'] (returns a new sorted list)
+
+basket.copy()  # Create a shallow copy of the list
+print(basket)  # ['a', 'x', 'b', 'c', 'd', 'e']
+
+basket.reverse()  # Reverse the order of the list
+print(basket)  # ['e', 'd', 'c', 'b', 'x', 'a']
