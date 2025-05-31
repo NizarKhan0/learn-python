@@ -81,6 +81,8 @@ print(some_value)
 
 # strings
 
+print("Strings section")
+
 print(type("Hello Mimizu!"))
 
 username = "Mimizu"
@@ -201,6 +203,8 @@ print(bool(1))  # True
 
 # List
 
+print("Lists section")
+
 li = [1, 2, 3, 4, 5]
 li2 = ["a", "b", "c", "d", "e"]
 li3 = [1, 2, 3, "a", "b", "c", True]
@@ -313,6 +317,8 @@ print(weapons)  # None
 
 # Dictionaries
 
+print("Dictionaries section")
+
 dictionary = {
     "name": "Nizar",
     "age": 24,
@@ -378,6 +384,7 @@ print(user2)  # {'name': 'Nizar', 'age': 24}
 
 
 # Tuples
+print("Tuples section")
 
 my_tuple = (1, 2, 3, 4, 5)
 print(my_tuple)  # (1, 2, 3, 4, 5)
@@ -391,3 +398,64 @@ print(new_tuple)  # (2, 3, 4)
 print(my_tuple.count(2))  # 1 (count the number of occurrences of 2)
 print(my_tuple.index(3))  # 2 (find the index of the first occurrence of 3)
 print(len(my_tuple))  # 5 (get the length of the tuple)
+
+
+# Sets
+
+print("Sets section")
+my_set = {1, 2, 3, 4, 5}
+new_set = my_set.copy()  # Create a shallow copy of the set
+print(new_set)  # {1, 2, 3, 4, 5}
+
+print(set(my_set))  # {1, 2, 3, 4, 5} (convert to set)
+print(my_set)  # {1, 2, 3, 4, 5}
+print(type(my_set))  # <class 'set'>
+print(1 in my_set)  # True
+print(6 in my_set)  # False
+my_set.add(6)  # Add an item to the set
+print(my_set)  # {1, 2, 3, 4, 5, 6}
+my_set.remove(2)  # Remove an item from the set
+print(my_set)  # {1, 3, 4, 5, 6}
+my_set.discard(
+    3
+)  # Remove an item from the set (does not raise an error if item not found)
+print(my_set)  # {1, 4, 5, 6}
+my_set.clear()  # Clear the set
+print(my_set)  # set()
+
+
+my_set2 = {1, 2, 3, 4, 5}
+your_set = {4, 5, 6, 7, 8}
+# Set operations
+
+print(my_set2.difference(your_set))  # {1, 2, 3} (items in my_set2 but not in your_set)
+
+print(my_set2.discard(2))  # Remove an item from my_set2
+print(my_set2)  # {1, 3, 4, 5}
+
+print(
+    my_set2.difference_update(your_set)
+)  # Update my_set2 to only contain items not in your_set
+print(my_set2)  # {1, 3}
+
+print(my_set2.intersection(your_set))  # {4, 5} (items in both sets)
+print(
+    my_set2.isdisjoint(your_set)
+)  # False (returns True if sets have no items in common)
+
+print(
+    my_set2.issubset(your_set)
+)  # False (returns True if my_set2 is a subset of your_set)
+
+print(my_set2.union(your_set))  # {1, 2, 3, 4, 5, 6, 7, 8} (combine both sets)
+
+print(
+    my_set2 | your_set
+)  # {1, 2, 3, 4, 5, 6, 7, 8} (combine both sets using the | operator)
+
+print(my_set2 & your_set)  # {4, 5} (intersection using the & operator)
+
+print(my_set2.issubset(your_set))  # False (check if my_set2 is a subset of your_set)
+print(
+    my_set2.issuperset(your_set)
+)  # False (check if my_set2 is a superset of your_set)
