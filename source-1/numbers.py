@@ -277,3 +277,35 @@ print(basket)  # ['a', 'x', 'b', 'c', 'd', 'e']
 
 basket.reverse()  # Reverse the order of the list
 print(basket)  # ['e', 'd', 'c', 'b', 'x', 'a']
+
+
+# Common list patterns
+
+# print(basket[::-1])  # Reverse the list using slicing
+# print(basket)
+
+print(range(1, 10))  # Create a range object from 1 to 9
+print(list(range(1, 10)))  # Create a range object from 1 to 9
+
+# Join
+
+sentence = '!'
+new_sentence = sentence.join(['This', 'is', 'a', 'sentence.'])  # Join the list of words into a sentence
+print(new_sentence)  # This is a new_sentence.
+
+sentence = ' '.join(['This', 'is', 'a', 'sentence.'])  # Join the list of words into a sentence
+print(sentence)  # This is a sentence.
+
+# list unpacking
+
+a, b, c, *other, d = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(a)  # 1
+print(b)  # 2
+print(c)  # 3
+print(other)  # [4, 5, 6]
+print(d)  # 9
+
+# none
+
+weapons = None  # Assign None to a variable
+print(weapons)  # None
