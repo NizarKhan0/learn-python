@@ -375,3 +375,19 @@ print(user2)  # {'name': 'Nizar'}
 
 user2.update({"age": 24})  # Update the dictionary with a new key-value pair
 print(user2)  # {'name': 'Nizar', 'age': 24}
+
+
+# Tuples
+
+my_tuple = (1, 2, 3, 4, 5)
+print(my_tuple)  # (1, 2, 3, 4, 5)
+print(type(my_tuple))  # <class 'tuple'>
+print(my_tuple[0])  # 1
+print(5 in my_tuple)  # True
+
+new_tuple = my_tuple[1:4]
+print(new_tuple)  # (2, 3, 4)
+
+print(my_tuple.count(2))  # 1 (count the number of occurrences of 2)
+print(my_tuple.index(3))  # 2 (find the index of the first occurrence of 3)
+print(len(my_tuple))  # 5 (get the length of the tuple)
