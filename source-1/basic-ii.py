@@ -26,3 +26,56 @@ if username and password:
     print("{username} is logged in!.".format(username=username))
 elif username and not password:
     print("Please enter your username or password!")
+
+
+# Ternary Operator
+
+# condition_if_true if condition else condition_if_false
+is_friend = False
+can_message = "Message allowed!" if is_friend else "Message not allowed!"
+print(can_message)
+
+# short circuiting
+is_Friend = True
+is_User = True
+
+print(is_Friend or is_User)  # True
+print(is_Friend and is_User)  # True
+print(is_Friend and not is_User)  # False
+
+# Logical Operators
+# <> == != < > <= >= and or not
+
+print(5 > 2)  # True
+print("a" == "b")  # False
+print(not (True))  # False
+
+
+is_magician = True
+is_expert = False
+
+# Conditional Logic for Magician and Expert Status
+if is_magician and is_expert:
+    print("You are a master magician!")
+# check if magician AND not expert: "At least you're getting there..."
+elif is_magician and not is_expert:
+    print("At least you're getting there...")
+# check if not magician: "You need magic powers to be a magician..."
+elif not is_magician:
+    print("You need magic powers to be a magician...")
+
+# is vs ==
+
+# 'is' checks for identity, '==' checks for equality
+print(True == bool(1))  # True
+print("1" == 1)  # False
+print([] == 1)  # False
+print(10 == 10.0)  # True
+print([1, 2, 3] == [1, 2, 3])  # True
+
+print(True is True)  # True
+print(True is bool(1))  # True
+print("1" is 1)  # False
+print([] is 1)  # False
+print(10 is 10.0)  # False
+print([1, 2, 3] is [1, 2, 3])  # False
