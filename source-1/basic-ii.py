@@ -79,3 +79,33 @@ print("1" is 1)  # False
 print([] is 1)  # False
 print(10 is 10.0)  # False
 print([1, 2, 3] is [1, 2, 3])  # False
+
+
+# For Loops
+
+# Looping Through a String
+for item in "Zero to Mastery":
+    print(item)
+
+# Looping Through a List
+for item in [1, 2, 3, 4, 5]:
+    print(item)
+
+# The break statement
+fruits = ["apple", "banana", "cherry", "grape"]
+for x in fruits:
+    if x == "cherry":
+        break
+    print(x)
+
+
+for item in (1, 2, 3, 4, 5):
+    for x in ["a", "b", "c"]:
+        print(1, "c")
+
+# The continue statement
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    if x == "banana":
+        continue
+    print(x)
