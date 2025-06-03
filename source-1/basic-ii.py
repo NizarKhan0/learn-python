@@ -127,3 +127,23 @@ for item in user.values():
 
 for item in user.keys():
     print(item)
+
+
+# counter
+
+my_List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+counter = 0
+for item in my_List:
+    counter += item
+print("Sum of items in my_List:", counter)
+
+
+# range
+
+print(range(0, 10))  # range(0, 10)
+for item in range(0, 10, 2):
+    print(item)
+
+for _ in range(2):
+    print(list(range(10)))
