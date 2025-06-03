@@ -179,10 +179,10 @@ while i < len(my_List):
     print(my_List[i])
     i += 1
 
-while True:
-    response = input("Say something: ")
-    if response == "bye":
-        break  # This will create an infinite loop until you break it manually
+# while True:
+#     response = input("Say something: ")
+#     if response == "bye":
+#         break  # This will create an infinite loop until you break it manually
 
 
 # break
@@ -205,3 +205,30 @@ for i in range(10):
     if i == 5:
         pass  # Do nothing when i is 5
     print(i)  # This will print all numbers from 0 to 9, including 5
+
+
+# GUI
+
+# Exercise
+
+picture = [
+    [0, 0, 0, 1, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0],
+    [0, 1, 1, 1, 1, 1, 0],
+    [1, 1, 1, 1, 1, 1, 1],
+    [0, 1, 1, 1, 1, 1, 0],
+    [0, 0, 1, 1, 1, 0, 0],
+    [0, 0, 0, 1, 0, 0, 0],
+]
+
+# if 0 - print ''
+# if 1 - print *
+# 1 iterate over the picture
+for row in picture:
+    # 2 iterate over each item in the image
+    for pixel in row:
+        if pixel == 1:
+            print("*", end="")
+        else:
+            print(" ", end="")
+    print()  # Print a new line after each row
