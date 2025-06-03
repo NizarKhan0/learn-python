@@ -147,3 +147,39 @@ for item in range(0, 10, 2):
 
 for _ in range(2):
     print(list(range(10)))
+
+
+# enumerate
+# Using enumerate to get index and value
+
+for i, char in enumerate("Zero to Mastery"):
+    print(i, char)
+
+for i, char in enumerate(list(range(100))):
+    if char == 50:
+        print(f"index of 50 is: {i}")
+
+
+# while loop - infinite loop example
+# Using a while loop to print numbers from 0 to 4
+i = 0
+while i < 50:
+    print(i)
+    i += 1
+else:
+    print("Loop finished successfully!")
+
+# for vs while loop
+my_List = [1, 2, 3]
+for item in my_List:
+    print(item)
+
+i = 0
+while i < len(my_List):
+    print(my_List[i])
+    i += 1
+
+while True:
+    response = input("Say something: ")
+    if response == "bye":
+        break  # This will create an infinite loop until you break it manually
