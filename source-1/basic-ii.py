@@ -255,3 +255,21 @@ for row in picture:
             print(empty, end="")
             print(empty, end="")
     print()  # Print a new line after each row
+
+
+# Exercise find duplicate
+
+some_List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 6, 8]
+
+# Find duplicates in a list
+# Using a loop to find duplicates in some_List
+duplicates = []
+for value in some_List:
+    if some_List.count(value) > 1:
+        # Check if the value is not already in the duplicates list
+        # to avoid adding it multiple times
+        if value not in duplicates:
+            # Append the value to the duplicates list
+            # if it is not already in the list
+            duplicates.append(value)
+print(duplicates)
