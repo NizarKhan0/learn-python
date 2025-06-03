@@ -109,3 +109,21 @@ for x in fruits:
     if x == "banana":
         continue
     print(x)
+
+
+# Iterables - Lists, Strings, Tuples, Sets, Dictionaries
+# iterate -> one by one check each item in the collection
+
+user = {"name": "Nizar", "age": 24, "is_verified": True}
+
+for key, value in user.items():
+    print(f"{key}: {value}")
+
+for item in user.items():
+    print(item)
+
+for item in user.values():
+    print(item)
+
+for item in user.keys():
+    print(item)
