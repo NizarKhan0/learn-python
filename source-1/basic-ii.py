@@ -223,7 +223,7 @@ picture = [
 
 # if 0 - print ''
 # if 1 - print *
-# 1 iterate over the picture
+# # 1 iterate over the picture
 for row in picture:
     # 2 iterate over each item in the image
     for pixel in row:
@@ -231,4 +231,27 @@ for row in picture:
             print("*", end="")
         else:
             print(" ", end="")
+    print()  # Print a new line after each row
+
+
+# clean
+# readability
+# predictability
+# DRY - Don't Repeat Yourself
+
+
+fill = "$"  # Character to fill for 1
+empty = " "  # Character to fill for 0
+
+# 1 iterate over the picture
+for row in picture:
+    # 2 iterate over each item in the image
+    for pixel in row:
+        if pixel:
+            print(fill, end=""),
+            print(fill, end=""),
+            print(fill, end=""),
+        else:
+            print(empty, end="")
+            print(empty, end="")
     print()  # Print a new line after each row
