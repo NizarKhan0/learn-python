@@ -183,3 +183,25 @@ while True:
     response = input("Say something: ")
     if response == "bye":
         break  # This will create an infinite loop until you break it manually
+
+
+# break
+# Using break to exit a loop when a condition is met
+for i in range(10):
+    if i == 5:
+        break  # Exit the loop when i is 5
+    print(i)
+
+# continue
+# Using continue to skip the current iteration when a condition is met
+for i in range(10):
+    if i % 2 == 0:
+        continue  # Skip even numbers
+    print(i)  # This will only print odd numbers
+
+# pass
+# Using pass to do nothing in a loop when a condition is met
+for i in range(10):
+    if i == 5:
+        pass  # Do nothing when i is 5
+    print(i)  # This will print all numbers from 0 to 9, including 5
