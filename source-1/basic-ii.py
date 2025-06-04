@@ -273,3 +273,32 @@ for value in some_List:
             # if it is not already in the list
             duplicates.append(value)
 print(duplicates)
+
+
+# Functions
+
+
+def say_hello():
+    print("Hello, World!")
+
+
+# Calling the function
+say_hello()
+
+
+def show_tree():
+    for image in picture:
+        for pixel in image:
+            if pixel == 1:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print()
+
+
+# Calling the function
+show_tree()
+show_tree()
+show_tree()
+
+print(show_tree)
