@@ -302,3 +302,17 @@ show_tree()
 show_tree()
 
 print(show_tree)
+
+
+# Parameters and Arguments
+
+
+# parameters
+def say_hello(name, emoji):
+    print(f"Ni hao {name} {emoji}")
+
+
+# arguments
+say_hello("Nizar", "😊")
+say_hello("Alice", "👋")
+say_hello("Xiao Ru", "🌟")
