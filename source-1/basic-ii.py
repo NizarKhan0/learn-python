@@ -308,11 +308,25 @@ print(show_tree)
 
 
 # parameters
+# Parameters are variables that are defined in the function signature
+# Arguments are the values that are passed to the function when it is called
+
+
+# Default Parameters
+def say_hello_to(name="Mimi", emoji="😊"):
+    # Default values for parameters
+    print(f"Hello {name} {emoji}")
+
+
 def say_hello(name, emoji):
     print(f"Ni hao {name} {emoji}")
 
 
-# arguments
+# positional arguments
 say_hello("Nizar", "😊")
 say_hello("Alice", "👋")
 say_hello("Xiao Ru", "🌟")
+
+# keyword arguments
+say_hello(emoji="😊", name="Nizar")
+say_hello_to()
