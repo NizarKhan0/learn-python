@@ -330,3 +330,24 @@ say_hello("Xiao Ru", "🌟")
 # keyword arguments
 say_hello(emoji="😊", name="Nizar")
 say_hello_to()
+
+
+# return
+def sum(num1, num2):
+    def another_function(n1, n2):
+        return n1 + n2
+
+    return another_function(num1, num2)
+
+    # not executed
+    return 5
+    print("hello")
+
+
+# should do one thing realy well and return something
+
+total = sum(10, 20)
+print(total)  # 30
+
+# print(sum(1, total))
+# print(sum(10, sum(10, 5)))
