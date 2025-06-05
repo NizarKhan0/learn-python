@@ -351,3 +351,31 @@ print(total)  # 30
 
 # print(sum(1, total))
 # print(sum(10, sum(10, 5)))
+
+
+# 1. Wrap the above code in a function called checkDriverAge(). Whenever you call this function, you will get prompted for age.
+
+
+def checkDriverAge(age=0):  # Prompting for age
+
+    # age = input("What is your age?: ")
+
+    if int(age) < 18:
+        return "Sorry, you are too young to drive this car. Powering off"
+    elif int(age) > 18:
+        return "Powering On. Enjoy the ride!"
+    elif int(age) == 18:
+        return "Congratulations on your first year of driving. Enjoy the ride!"
+
+
+# Test calls (no input wrapping needed)
+print(checkDriverAge(92))  # Argument provided → "Powering On..."
+print(checkDriverAge())  # No argument → uses age=0 → "Sorry, you are too young..."
+
+
+# Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
+
+# 2 Instead of using the input(). Now, make the checkDriverAge() function accept an argument of age, so that if you enter:
+# checkDriverAge(92);
+# it returns "Powering On. Enjoy the ride!"
+# also make it so that the default age is set to 0 if no argument is given.
