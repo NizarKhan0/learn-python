@@ -369,8 +369,8 @@ def checkDriverAge(age=0):  # Prompting for age
 
 
 # Test calls (no input wrapping needed)
-print(checkDriverAge(92))  # Argument provided → "Powering On..."
-print(checkDriverAge())  # No argument → uses age=0 → "Sorry, you are too young..."
+# print(checkDriverAge(92))  # Argument provided → "Powering On..."
+# print(checkDriverAge())  # No argument → uses age=0 → "Sorry, you are too young..."
 
 
 # Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
@@ -379,3 +379,25 @@ print(checkDriverAge())  # No argument → uses age=0 → "Sorry, you are too yo
 # checkDriverAge(92);
 # it returns "Powering On. Enjoy the ride!"
 # also make it so that the default age is set to 0 if no argument is given.
+
+
+# Method vs Functions
+# A method is a function that is associated with an object. In Python, methods are functions that belong to an object (like a list or a string).
+# list()
+# print()
+# max()
+# min()
+# input()
+
+
+# A function is a block of code that performs a specific task and can be called independently.
+def greet(name):
+
+    # pass/return
+    print(f"Hello, {name}!")
+
+
+greet("Nizar")  # This is a function call
+
+
+print("hellloo".upper())  # This is a method call on the string object 'hellloo'
