@@ -401,3 +401,42 @@ greet("Nizar")  # This is a function call
 
 
 print("hellloo".upper())  # This is a method call on the string object 'hellloo'
+
+
+# Docstrings - add comments & definitions to functions
+
+
+def test(a):
+    """
+    Info: this function tests and prints parameter a
+    """
+
+    print(a)
+
+
+test("!!!!")
+help(test)  # Displays the docstring of the function
+print(test.__doc__)  # Accessing the docstring directly
+
+
+# Clean Code
+def is_even(num):
+
+    # if num % 2 == 0:
+    #     return True
+    # elif num % 2 != 0:
+    #     return False
+
+    # if num % 2 == 0:
+    #     return True
+    # else:
+    #     return False
+
+    # if num % 2 == 0:
+    #     return True
+    # return False
+
+    return num % 2 == 0  # Returns True if even, False if odd
+
+
+print(is_even(50))
