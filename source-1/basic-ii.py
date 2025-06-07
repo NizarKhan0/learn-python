@@ -440,3 +440,28 @@ def is_even(num):
 
 
 print(is_even(50))
+
+
+# args & kwargs
+
+
+def super_func(name, *args, i="hi", **kwargs):
+
+    # print(args)  # args is a tuple of all arguments passed
+    # print(kwargs)  # kwargs is a dictionary of all keyword arguments passed
+
+    total = 0
+    # Calculate the sum of all positional arguments
+    for items in kwargs.values():
+        total += items
+
+    # function sum has been declare on top
+    return sum(*args) + total  # Returns the sum of all arguments
+
+
+print(
+    super_func("Nizar", 1, 2, num1=5, num2=10)
+)  # args will be (1, 2) and kwargs will be {'num1': 5, 'num2': 10}
+
+
+# Rule: params, *args, default params, **kwargs
