@@ -460,8 +460,27 @@ def super_func(name, *args, i="hi", **kwargs):
 
 
 print(
-    super_func("Nizar", 1, 2, num1=5, num2=10)
+    super_func("Nizar", 1, 2, num1=5, num2=12)
 )  # args will be (1, 2) and kwargs will be {'num1': 5, 'num2': 10}
 
 
 # Rule: params, *args, default params, **kwargs
+
+
+# Exercise function
+
+
+def highest_even(li):
+
+    # Initialize a variable to store the highest even number
+    evens = []
+
+    for item in li:
+        # Check if the item is even
+        if item % 2 == 0:
+            evens.append(item)
+    # Return the maximum even number from the list
+    return max(evens) if evens else None  # Return None if no even number is found
+
+
+print(highest_even([10, 2, 3, 4, 8, 11, 12, 14, 16, 18]))  # Should return 18
