@@ -484,3 +484,17 @@ def highest_even(li):
 
 
 print(highest_even([10, 2, 3, 4, 8, 11, 12, 14, 16, 18]))  # Should return 18
+
+
+# Walrus Operator
+# The walrus operator (:=) allows you to assign a value to a variable as part of an expression.
+
+a = "hellooooooo"
+
+if (n := len(a)) > 10:
+    print(f"Too long! Length: {n}")
+
+while n := len(a) > 1:
+    print(f"{n}, removing last character.")
+    a = a[:-1]  # Remove the last character
+print(f"Final string: {a}")  # Should print the final string after all removals
