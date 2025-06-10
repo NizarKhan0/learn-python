@@ -498,3 +498,96 @@ while n := len(a) > 1:
     print(f"{n}, removing last character.")
     a = a[:-1]  # Remove the last character
 print(f"Final string: {a}")  # Should print the final string after all removals
+
+
+# scope
+
+# local scope
+
+
+def local_scope():
+    x = 10  # Local variable
+    print(f"Local x: {x}")
+
+
+local_scope()  # Calling the function to see the local variable
+# print(x)  # This would raise an error because x is not defined outside the function
+
+# global scope
+x = 20  # Global variable
+
+
+# print(f"Global x: {x}")
+def global_scope():
+    global x  # Declare x as a global variable
+    x = 30  # Modify the global variable
+    print(f"Global x inside function: {x}")
+
+
+global_scope()
+print(f"Global x outside function: {x}")
+
+# scope rules
+
+# 1-start with local scope
+# 2-parent local?
+# 3-global
+# 4-builtin python functions
+
+a = 10  # Global variable
+
+
+def parent():
+    a = 15  # Local variable in parent scope
+
+    def confusion():
+        # return sum
+        return a  # This will raise an error because 'return' is not defined
+
+    return confusion()  # Call the inner function
+
+
+print(
+    parent()
+)  # This will print 15, as it accesses the local variable 'a' in the parent scope
+print(a)  # This will print 10, as it accesses the global variable 'a'
+
+
+# global keyword
+
+total = 0
+
+
+# def count():
+#     global total  # Declare total as a global variable
+#     total += 1  # Increment the global variable
+#     return total
+# count()
+# count()
+# print(count())
+
+
+def count(total):
+    total += 2  # Increment the global variable
+    return total
+
+
+print(count(5))  # This will print 7, as it adds 2 to the passed argument 5
+
+
+# nonlocal keyword
+
+
+def outer_function():
+    x = "local"
+
+    def inner_function():
+        nonlocal x  # Declare x as nonlocal to modify the outer variable
+        x = "nonlocal"
+        print(f"Inner x: {x}")
+
+    inner_function()  # Call the inner function
+    print(f"Outer x: {x}")  # This will print the modified value of x
+
+
+outer_function()  # Calling the outer function to see the output
