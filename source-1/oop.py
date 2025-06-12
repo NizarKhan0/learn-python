@@ -26,10 +26,23 @@ class PlayerCharacters:
     
     # def run(self, hello):
     #     print(f'{self.name} is running {hello}')
+    
+    @classmethod
+    def adding_things(cls, num1, num2):
+        return cls('Nizar', num1 + num2)
+    
+    @staticmethod
+    def adding_things_static(num1, num2):
+        return num1 + num2
 
 
-player1 = PlayerCharacters('Nizar', 24)
-player1.shout()
+# player1 = PlayerCharacters('Nizar', 24)
+# player1.shout()
+
+# classmethod
+player3 = PlayerCharacters.adding_things(21, 3)
+print(player3.age)  # Using class method to add numbers
+
 
 # player2 = PlayerCharacters('John', 28)
 
@@ -42,5 +55,23 @@ player1.shout()
 # help(player1)  # help function to see the attributes and methods of the class
 # help(list)  # help function to see the attributes and methods of the list class
 
-
-
+# Example of a class with various methods and attributes
+class NameOfClass():
+    class_attribute = 'Value'
+    def __init__(self, param1, param2):
+        self.param1 = param1
+        self.param2 = param2
+        
+    def method1(self):
+        #code
+        print(f'Method 1 called with {self.param1} and {self.param2}')
+    
+    @classmethod
+    def class_method(cls, arg1):
+        # code
+        print(f'Class method called with {arg1}')
+        
+    @staticmethod
+    def static_method(arg1):
+        # code
+        print(f'Static method called with {arg1}')
