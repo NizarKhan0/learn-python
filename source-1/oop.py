@@ -75,3 +75,23 @@ class NameOfClass():
     def static_method(arg1):
         # code
         print(f'Static method called with {arg1}')
+
+
+# Encapsulation
+class EncapsulatedClass:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def run(self):
+        print('run')
+    
+    def speak(self):
+        print(f'my name is {self.name} and I am {self.age} years old')
+        
+
+player1 = EncapsulatedClass('Nizar', 24)
+player1.speak()  # my name is Nizar and I am 24 years old
+
+player2 = {'name': 'John', 'age': 28}
+print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my name is John and I am 28 years old
