@@ -91,7 +91,13 @@ class EncapsulatedClass:
         
 
 player1 = EncapsulatedClass('Nizar', 24)
-player1.speak()  # my name is Nizar and I am 24 years old
+# player1.speak()  # my name is Nizar and I am 24 years old
+
+# abstraction
+player1.name = '!!!'
+player1.speak = 'ILYSM'
+print(player1.speak)  # ILYSM
 
 player2 = {'name': 'John', 'age': 28}
 print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my name is John and I am 28 years old
+
