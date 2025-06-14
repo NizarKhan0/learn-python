@@ -101,3 +101,27 @@ print(player1.speak)  # ILYSM
 player2 = {'name': 'John', 'age': 28}
 print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my name is John and I am 28 years old
 
+
+# Private vs Public Attributes
+
+# Private - attributes are not accessible outside the class and cannot be modified directly.
+class PrivateClass:
+    def __init__(self, name):
+        self._name = name  # private attribute
+    
+    def get_name(self):
+        return self._name  # public method to access private attribute
+    
+    def set_name(self, name):
+        self._name = name  # public method to modify private attribute
+        
+# Public - attributes are accessible from outside the class and can be modified directly.
+class PublicClass:
+    def __init__(self, name):
+        self.name = name  # public attribute
+    
+    def get_name(self):
+        return self.name  # public method to access public attribute
+    
+    def set_name(self, name):
+        self.name = name  # public method to modify public attribute
