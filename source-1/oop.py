@@ -105,23 +105,51 @@ print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my
 # Private vs Public Attributes
 
 # Private - attributes are not accessible outside the class and cannot be modified directly.
-class PrivateClass:
-    def __init__(self, name):
-        self._name = name  # private attribute
+# class PrivateClass:
+#     def __init__(self, name):
+#         self._name = name  # private attribute
     
-    def get_name(self):
-        return self._name  # public method to access private attribute
+#     def get_name(self):
+#         return self._name  # public method to access private attribute
     
-    def set_name(self, name):
-        self._name = name  # public method to modify private attribute
+#     def set_name(self, name):
+#         self._name = name  # public method to modify private attribute
         
-# Public - attributes are accessible from outside the class and can be modified directly.
-class PublicClass:
-    def __init__(self, name):
-        self.name = name  # public attribute
+# # Public - attributes are accessible from outside the class and can be modified directly.
+# class PublicClass:
+#     def __init__(self, name):
+#         self.name = name  # public attribute
     
-    def get_name(self):
-        return self.name  # public method to access public attribute
+#     def get_name(self):
+#         return self.name  # public method to access public attribute
     
-    def set_name(self, name):
-        self.name = name  # public method to modify public attribute
+#     def set_name(self, name):
+#         self.name = name  # public method to modify public attribute
+        
+
+# Inheritance
+
+class User():
+    def sign_in(self):
+        print('logged in')
+
+class Wizard(User):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+        
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+class Archer(User):
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
+        
+    def attack(self):
+        print(f'attacking with arrows: arrows left - {self.num_arrows}')
+        
+wizard1 = Wizard('Merlin', 50)
+archer1 = Archer('Robin', 100)
+wizard1.attack()
+archer1.attack()
