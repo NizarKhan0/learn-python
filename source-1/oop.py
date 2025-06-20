@@ -130,19 +130,21 @@ print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my
 # Inheritance
 
 class User(object):
+    def __init__(self, email):
+        self.email = email
     def sign_in(self):
         print('logged in')
         
-    def attack(self):
-        print('do nothing')
 
 class Wizard(User):
-    def __init__(self, name, power):
+    def __init__(self, name, power, email):
+        # super()
+        super().__init__(email)
+        # User.__init__(self, email)
         self.name = name
         self.power = power
         
     def attack(self):
-        User.attack(self)
         print(f'attacking with power of {self.power}')
 
 class Archer(User):
@@ -153,7 +155,8 @@ class Archer(User):
     def attack(self):
         print(f'attacking with arrows: arrows left - {self.num_arrows}')
         
-wizard1 = Wizard('Merlin', 50)
+wizard1 = Wizard('Merlin', 50, 'Ql7wz@example.com')
+print(wizard1.email)
 # print(isinstance(wizard1, object))  # True
 archer1 = Archer('Robin', 100)
 print(wizard1.attack())
@@ -171,4 +174,5 @@ print(wizard1.attack())
 
 # for char in [wizard1, archer1]:
 #     char.attack()
+
 
