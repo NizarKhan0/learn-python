@@ -14,23 +14,23 @@
 class PlayerCharacters:
     # class object attribute
     membership = True
+
     def __init__(self, name='Anonymous', age=0):
         # if (PlayerCharacters.membership):
         if (age > 18):
-         self.name = name  # attribute
-         self.age = age
-         
+            self.name = name  # attribute
+            self.age = age
 
     def shout(self):
         print(f'{self.name} is shouting!')
-    
+
     # def run(self, hello):
     #     print(f'{self.name} is running {hello}')
-    
+
     @classmethod
     def adding_things(cls, num1, num2):
         return cls('Nizar', num1 + num2)
-    
+
     @staticmethod
     def adding_things_static(num1, num2):
         return num1 + num2
@@ -58,19 +58,20 @@ print(player3.age)  # Using class method to add numbers
 # Example of a class with various methods and attributes
 class NameOfClass():
     class_attribute = 'Value'
+
     def __init__(self, param1, param2):
         self.param1 = param1
         self.param2 = param2
-        
+
     def method1(self):
-        #code
+        # code
         print(f'Method 1 called with {self.param1} and {self.param2}')
-    
+
     @classmethod
     def class_method(cls, arg1):
         # code
         print(f'Class method called with {arg1}')
-        
+
     @staticmethod
     def static_method(arg1):
         # code
@@ -82,13 +83,13 @@ class EncapsulatedClass:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        
+
     def run(self):
         print('run')
-    
+
     def speak(self):
         print(f'my name is {self.name} and I am {self.age} years old')
-        
+
 
 player1 = EncapsulatedClass('Nizar', 24)
 # player1.speak()  # my name is Nizar and I am 24 years old
@@ -99,7 +100,8 @@ player1.speak = 'ILYSM'
 print(player1.speak)  # ILYSM
 
 player2 = {'name': 'John', 'age': 28}
-print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my name is John and I am 28 years old
+# my name is John and I am 28 years old
+print(f"My name is {player2['name']} and I am {player2['age']} years old")
 
 
 # Private vs Public Attributes
@@ -108,33 +110,34 @@ print(f"My name is {player2['name']} and I am {player2['age']} years old")  # my
 # class PrivateClass:
 #     def __init__(self, name):
 #         self._name = name  # private attribute
-    
+
 #     def get_name(self):
 #         return self._name  # public method to access private attribute
-    
+
 #     def set_name(self, name):
 #         self._name = name  # public method to modify private attribute
-        
+
 # # Public - attributes are accessible from outside the class and can be modified directly.
 # class PublicClass:
 #     def __init__(self, name):
 #         self.name = name  # public attribute
-    
+
 #     def get_name(self):
 #         return self.name  # public method to access public attribute
-    
+
 #     def set_name(self, name):
 #         self.name = name  # public method to modify public attribute
-        
+
 
 # Inheritance
 
 class User(object):
     def __init__(self, email):
         self.email = email
+
     def sign_in(self):
         print('logged in')
-        
+
 
 class Wizard(User):
     def __init__(self, name, power, email):
@@ -143,17 +146,19 @@ class Wizard(User):
         # User.__init__(self, email)
         self.name = name
         self.power = power
-        
+
     def attack(self):
         print(f'attacking with power of {self.power}')
+
 
 class Archer(User):
     def __init__(self, name, num_arrows):
         self.name = name
         self.num_arrows = num_arrows
-        
+
     def attack(self):
         print(f'attacking with arrows: arrows left - {self.num_arrows}')
+
 
 #  introspection
 wizard1 = Wizard('Merlin', 50, 'Ql7wz@example.com')
@@ -170,13 +175,12 @@ print(wizard1.attack())
 
 # def player_attack(char):
 #     char.attack()
-    
+
 # player_attack(wizard1)
 # player_attack(archer1)
 
 # for char in [wizard1, archer1]:
 #     char.attack()
-
 
 
 # dunder method
@@ -189,22 +193,36 @@ class Toy():
             'name': 'Yoyo',
             'has_pets': False
         }
-        
+
     def __str__(self):
         return f'{self.color}'
-    
+
     def __len__(self):
         return 5
-    
+
     def __call__(self):
         print('yess??')
-        
+
     def __getitem__(self, i):
         return self.my_dict[i]
-    
+
+
 action_figure = Toy('red', 0)
 print(action_figure.__str__())
 print(str(action_figure))
 print(len(action_figure))
 print(action_figure())
-print(action_figure['name']) # my_dict
+print(action_figure['name'])  # my_dict
+
+# extending list
+
+class SuperList(list):
+    def __len__(self):
+        return 1000
+
+super_list1 = SuperList()
+
+print(len(super_list1))
+super_list1.append(5)
+print(super_list1[0])
+print(issubclass(list, object))
