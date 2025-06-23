@@ -226,3 +226,37 @@ print(len(super_list1))
 super_list1.append(5)
 print(super_list1[0])
 print(issubclass(list, object))
+
+
+#  multiple inheritance
+
+class Userin():
+
+    def sign_in(self):
+        print('logged in')
+
+class Wizardin(Userin):
+    def __init__(self, name, power):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+class Archerin(Userin):
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
+
+    def attack(self):
+        print(f'attacking with arrows: arrows left - {self.num_arrows}')
+        
+class Hybrid(Wizardin, Archerin):
+    def __init__(self, name, power, num_arrows):
+        Wizardin.__init__(self, name, power)
+        Archerin.__init__(self, name, num_arrows)
+        
+
+hybrid1 = Hybrid('Merlin', 50, 100)
+print(hybrid1.attack())
+        
