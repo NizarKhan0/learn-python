@@ -16,3 +16,12 @@ def multiply_by2(item):
 
 print(list(map(multiply_by2, my_list)))
 print(my_list)
+
+# Filter function
+
+my_list2 = [1, 2, 3]
+def check_odd(item):
+    return item % 2 != 0
+
+print(list(filter(check_odd, my_list2)))
+print(my_list2)
