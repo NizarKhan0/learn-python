@@ -25,3 +25,13 @@ def check_odd(item):
 
 print(list(filter(check_odd, my_list2)))
 print(my_list2)
+
+
+# Zip Function
+
+my_list3 = [1, 2, 3]
+you_list = [10, 20, 30]
+their_list = [100, 200, 300]
+
+print(list(zip(my_list3, you_list, their_list)))
+print(my_list3)
