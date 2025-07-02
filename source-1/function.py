@@ -52,10 +52,18 @@ print(my_list4)
 
 
 # Lambda Expressions
-from functools import reduce
-
 # lambda param: action(param)
 my_list5 = [1, 2, 3]
 
 print(reduce(lambda acc, item: acc + item, my_list5, 0))
 print(my_list5)
+
+# Exercise Lambda Expressions
+# Square
+my_list6 = [5, 4, 3]
+
+print(list(map(lambda item: item * 2, my_list6)))
+
+# List Sorting
+a = [(0, 2), (4, 3), (9, 9), (10, -1)]
+print(sorted(a, key=lambda item: item[1]))
