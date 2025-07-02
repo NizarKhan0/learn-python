@@ -49,3 +49,13 @@ def accumulator(acc, item):
 
 print(reduce(accumulator, my_list4, 0))
 print(my_list4)
+
+
+# Lambda Expressions
+from functools import reduce
+
+# lambda param: action(param)
+my_list5 = [1, 2, 3]
+
+print(reduce(lambda acc, item: acc + item, my_list5, 0))
+print(my_list5)
