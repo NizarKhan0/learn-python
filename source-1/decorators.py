@@ -1,26 +1,54 @@
 # Intro
 def hello(func):
     func()
-    
+
+
 def greet():
     print("Hello, World!")
+
 
 a = hello(greet)
 
 print(a)
 
-@decorator
-def hello():
-    print("Hello, World!")
-    
+# @decorator
+# def hello():
+#     print("Hello, World!")
+
 
 # Highest order functions
 
-def greet(func):
-    func()
+# def greet(func):
+#     func()
 
 # map(), filter(), reduce()
-def greet2():
-    def func():
-        return 5
-    return func
+# Z
+
+
+# Decorators
+# def hello():
+#     print("Hello, World!")
+
+def my_decorator(func):
+    def wrap_func():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrap_func
+
+
+# @my_decorator
+def hellod():
+    print("Hello, World!")
+# hellod()
+
+
+@my_decorator
+def bye():
+    print("Goodbye, World!")
+bye()
+
+# a = my_decorator(bye)
+# a()
+
+# my_decorator(bye)()
