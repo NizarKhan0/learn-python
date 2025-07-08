@@ -61,8 +61,8 @@ def my_decorator2(func):
         func(*args, **kwargs)
     return wrap_func
 
-@my_decorator
-def hello2(greeting, emoji=":)"):
+@my_decorator2
+def hello2(greeting, emoji=':)'):
     print(greeting, emoji)
     
-hello2("Hello")
+hello2('Hello')
