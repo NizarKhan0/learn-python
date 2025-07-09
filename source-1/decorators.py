@@ -66,3 +66,21 @@ def hello2(greeting, emoji=':)'):
     print(greeting, emoji)
     
 hello2('Hello')
+
+
+#Decorators
+
+from time import time
+def perfomance(fn):
+    def wrap_func(*args, **kwargs):
+        t1 = time()
+        result = fn(*args, **kwargs)
+        t2 = time()
+        print(f'took {t2 - t1} milliseconds')
+        return result
+    return wrap_func
+@perfomance
+def long_time():
+    for i in range(1000000):
+        i * 5
+long_time()
