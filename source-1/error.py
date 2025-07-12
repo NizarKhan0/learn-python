@@ -48,13 +48,31 @@ print(sum('1', 2))  # This will raise a TypeError
 # print(sum(1, 2))    # This will return 3
 
 # Excerise Error Handling
+# while True:
+#     try:
+#         age = int(input("What is your age? "))
+#         10/age
+#     except ValueError:
+#         print("Please enter a valid number")
+#         continue
+#     except ZeroDivisionError:
+#         print("Please enter an age higher than 0")
+#         break
+#     else:
+#         print("Thank you!")
+#         break
+#     finally:
+#         print('ok, we are done!')
+#     print('This will always run')
+
+
+# Error Handling 3
 while True:
     try:
         age = int(input("What is your age? "))
         10/age
-    except ValueError:
-        print("Please enter a valid number")
-        continue
+        # raise ValueError("hey cut it out")  # This will raise a ValueError
+        raise Exception("hey cut it out")  # This will raise a ValueError
     except ZeroDivisionError:
         print("Please enter an age higher than 0")
         break
@@ -64,3 +82,4 @@ while True:
     finally:
         print('ok, we are done!')
     print('This will always run')
+
