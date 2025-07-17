@@ -93,3 +93,31 @@ class MyGen():
 gen = MyGen(1, 10)
 for i in gen:
     print(i)
+
+
+# Fibonacci Numbers
+
+def fibonacci(number):
+    a = 0
+    b = 1
+    for i in range(number):
+        yield a  # Yield the current Fibonacci number
+        temp = a  # Store the current Fibonacci number
+        a = b
+        b = temp + b  # Update to the next Fibonacci number
+
+for x in fibonacci(20):
+    print(x)
+    
+def fibonacci2(number):
+    a = 0
+    b = 1
+    result = []
+    for i in range(number):
+        result.append(a)  # Append the current Fibonacci number to the result list
+        temp = a  # Store the current Fibonacci number
+        a = b
+        b = temp + b
+    return result  # Return the list of Fibonacci numbers
+
+print(fibonacci2(20))  # This will print the first 20 Fibonacci numbers as a list
