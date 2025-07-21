@@ -1,3 +1,4 @@
+print(__name__)
 def multiply(num1, num2):
     """Multiplies two numbers and returns the result."""
     return num1 * num2
@@ -8,3 +9,8 @@ def divide(num1, num2):
 
 def max():
     return 'oops'
+
+class Student():
+    pass
+
+st1 = Student()
