@@ -21,6 +21,21 @@
     # print(my_file.readlines())  # Read all lines
 
 # create a new file and write to it
-with open('new_file.txt', mode='w') as my_file:
-    text = my_file.write('Nihaoo, Xiao!\n')  # Write to the file
-    print(text)
+# with open('new_file.txt', mode='w') as my_file:
+#     text = my_file.write('Nihaoo, Xiao!\n')  # Write to the file
+#     print(text)
+
+# read file with different file path
+
+# relative path
+with open('app/sad.txt', mode='r') as my_file:
+    print(my_file.read())  # Read the entire file content
+
+# absolute path
+with open(r'C:\laragon\www\learn-python\source-1\file-IO\app\sad.txt', mode='r') as my_file:
+    print(my_file.read())  # Read the entire file content
+
+# ./ - Current directory
+# .. - Parent directory
+with open('./app/sad.txt', mode='r') as my_file:
+    print(my_file.read())  # Read the entire file content
