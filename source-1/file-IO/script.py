@@ -39,3 +39,17 @@ with open(r'C:\laragon\www\learn-python\source-1\file-IO\app\sad.txt', mode='r')
 # .. - Parent directory
 with open('./app/sad.txt', mode='r') as my_file:
     print(my_file.read())  # Read the entire file content
+
+
+# File IO - Errors
+# Handling file not found error
+try:
+    with open('non_existent_file.txt', mode='r') as my_file:
+        print(my_file.read())
+except FileNotFoundError as err:
+    # print(f"Error: {e}")
+    print("File not found. Please check the file path and try again.")
+    raise err
+except IOError as err:
+    print("An IOError occurred. Please check the file permissions or disk space.")
+    raise err
