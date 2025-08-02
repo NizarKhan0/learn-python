@@ -1,3 +1,7 @@
+from translate  import Translator
+
+translator = Translator(to_lang="ja")
+
 # my_file = open('test.txt')
 
 # print(my_file)
@@ -52,4 +56,16 @@ except FileNotFoundError as err:
     raise err
 except IOError as err:
     print("An IOError occurred. Please check the file permissions or disk space.")
+    raise err
+
+
+# Exercise
+
+try:
+    with open('./name.txt', mode='r') as my_file:
+        text = my_file.read()
+        translation = translator.translate(text)
+        print(translation)
+except FileNotFoundError as err:
+    print("File not found. Please check the file path and try again.")
     raise err
