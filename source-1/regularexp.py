@@ -22,3 +22,12 @@ print(a.span())  # <re.Match object; span=(10, 14), match='
 print(a.group())  # 'this'
 print(a.start())  # 10
 print(a.end())  # 14
+
+# Regular expressions 2
+
+# regex101dotcom
+
+pattern = re.compile(r'\d{3}-\d{2}-\d{4}')
+string = 'My phone number is 123-45-6789.'
+
+print(re.search(pattern, string))
