@@ -31,3 +31,13 @@ pattern = re.compile(r'\d{3}-\d{2}-\d{4}')
 string = 'My phone number is 123-45-6789.'
 
 print(re.search(pattern, string))
+
+
+# Regular expressions 3
+
+pattern = re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+string = 'b@b.com'
+# string = 'zar'
+
+a = pattern.search(string)
+print(a)  # <re.Match object; span=(0, 7), match='
