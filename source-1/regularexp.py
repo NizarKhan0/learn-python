@@ -41,3 +41,19 @@ string = 'b@b.com'
 
 a = pattern.search(string)
 print(a)  # <re.Match object; span=(0, 7), match='
+
+
+# Password validation
+
+pattern = re.compile(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$')
+password = 'Password123!'
+print(pattern.match(password))  # <re.Match object; span=(0, 14), match='Password123!'>
+
+# we created the password checker, but we did not implement the last rule: password has to end with a number
+# <re.Match object; span=(0, 12), match='Password123'>
+# The password is valid, but it does not end with a number
+# To fix this, we need to change the regex to require a digit at the end
+pattern = re.compile(r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{7,}\d$')
+password = 'Password123'
+print(pattern.match(password))  # <re.Match object; span=(0, 12), match='Password123'>
+# The password is valid and ends with a number
