@@ -15,7 +15,20 @@ class TestMain(unittest.TestCase):
     def test_do_stuff2(self):
         test_param = 'asdasdsa'
         result = main.do_stuff(test_param)
-        self.assertTrue(isinstance(result, ValueError))
+        # self.assertTrue(isinstance(result, ValueError))
+        self.assertIsInstance(result, ValueError)
+        
+    
+    def test_do_stuff3(self):
+        test_param = None
+        result = main.do_stuff(test_param)
+        self.assertEqual(result, '_Please provide a valid number_')
+        
+    def test_do_stuff4(self):
+        test_param = ''
+        result = main.do_stuff(test_param)
+        self.assertEqual(result, '_Please provide a valid number_')
 
-unittest.main()
-# This code is a unit test for the do_stuff function in the main module.
+if __name__ == '__main__':
+    unittest.main()
+# This code is a unit test for the do_stuff function in the main module.\
