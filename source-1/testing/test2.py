@@ -7,9 +7,8 @@ import unittest
 import main
 
 class TestMain(unittest.TestCase):
-    def setUp(self):
-        print('about to run a test')
     def test_do_stuff(self):
+        ''' Hiiii'''
         test_param = 10
         result = main.do_stuff(test_param)
         self.assertEqual(result, 15)
@@ -30,9 +29,6 @@ class TestMain(unittest.TestCase):
         test_param = ''
         result = main.do_stuff(test_param)
         self.assertEqual(result, '_Please provide a valid number_')
-        
-    def tearDown(self):
-        print('finished running a test')
 
 if __name__ == '__main__':
     unittest.main()
