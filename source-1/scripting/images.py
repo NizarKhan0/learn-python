@@ -3,6 +3,17 @@ from PIL import Image, ImageFilter
 img = Image.open(
     "C:/laragon/www/learn-python/source-1/scripting/pokedex/pikachu.jpg")
 
+# img = Image.open(
+#     "C:/laragon/www/learn-python/source-1/scripting/astro.jpg")
+
+# Resize the image
+# new_img = img.resize((400, 400))
+# new_img.save(
+#     "C:/laragon/www/learn-python/source-1/scripting/astro_resized.jpg")
+# img.thumbnail((400, 400))  # Maintains aspect ratio
+# img.save(
+#     "C:/laragon/www/learn-python/source-1/scripting/astro_resized.jpg")
+
 print(img.size)  # Output the size of the image
 print(img.format)  # Output the format of the image
 print(img.mode)  # Output the mode of the image (e.g., RGB, L)
